@@ -19,6 +19,7 @@ tar -czf "$BACKUP_DIR/$FILENAME" "$SOURCE_DIR"
 if [ $? -eq 0 ]; then
     SIZE=$(du -sh "$BACKUP_DIR/$FILENAME" | cut -f1)
     echo "백업 완료! (크기: $SIZE)"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] 백업 성공: $FILENAME" >> backup.log
 else
     echo "백업 실패"
     exit 1
@@ -26,3 +27,5 @@ fi
 
 echo "현재 보관 중인 백업:"
 ls -1 "$BACKUP_DIR"
+
+
