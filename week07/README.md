@@ -21,3 +21,14 @@
 - `.env` 파일에는 실제 비밀번호와 같은 비밀 정보가 들어 있다.
 - Git에 올리면 해당 정보가 저장소와 커밋 기록에 남을 수 있다.
 - `.env`는 Git에서 제외하고, `.env.example`에는 설정 예시만 기록한다.
+
+## docker compose ps 결과
+
+```text
+NAME                IMAGE            COMMAND                  SERVICE   CREATED        STATUS                  PORTS
+guestbook-nginx-1   nginx:alpine     "/docker-entrypoint.…"   nginx     3 hours ago    Up 3 hours              0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+guestbook-redis-1   redis:7-alpine   "docker-entrypoint.s…"   redis     30 hours ago   Up 30 hours (healthy)   6379/tcp
+guestbook-web-1     guestbook-web    "python app.py"          web       3 hours ago    Up 3 hours (healthy)    5000/tcp
+guestbook-web-2     guestbook-web    "python app.py"          web       3 hours ago    Up 3 hours (healthy)    5000/tcp
+guestbook-web-3     guestbook-web    "python app.py"          web       3 hours ago    Up 3 hours (healthy)    5000/tcp
+```
