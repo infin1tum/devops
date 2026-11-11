@@ -3,3 +3,6 @@ week04/restore-check/
 
 .env
 .DS_Store
+
+k8s/secret.yaml
+week11/k8s/secret.yaml
