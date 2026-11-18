@@ -6,3 +6,4 @@ week04/restore-check/
 
 k8s/secret.yaml
 week11/k8s/secret.yaml
+guestbook/k8s/secret.yaml
